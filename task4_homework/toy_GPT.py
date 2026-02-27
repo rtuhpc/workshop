@@ -107,13 +107,13 @@ def chat(prompt):
 # Model & Training Parameters
 # -----------------------------
 
-seq_len = 128        # Number of tokens the model sees at once (context window size)
+seq_len = 32        # Number of tokens the model sees at once (context window size)
 batch_size = 128     # Number of sequences processed in parallel before each weight update
-hidden_size = 8   # Dimensionality of token embeddings and hidden layers
+hidden_size = 4   # Dimensionality of token embeddings and hidden layers
 num_layers = 1       # Number of stacked Transformer encoder layers
 num_heads = 2        # Number of self-attention heads per Transformer layer
 lr = 5e-4            # Learning rate for the optimizer (Adam)
-epochs = 10           # Number of full passes over the dataset
+epochs = 5           # Number of full passes over the dataset
 temperature = 0.8    # reduces randomness → more readable output
 num_workers = 0     # number of parallel data-loading subprocesses (should match number of CPU-cores)
 
@@ -124,7 +124,7 @@ num_workers = 0     # number of parallel data-loading subprocesses (should match
 # Dataset Preparation
 # -----------------------------
 print("Tokenize dataset")
-dataset = BPEDataset("shakespeare_full.txt", seq_len)
+dataset = BPEDataset("shakespeare_small.txt", seq_len)
 vocab_size = dataset.vocab_size
 print("Vocab size:", dataset.vocab_size)
 
