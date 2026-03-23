@@ -44,7 +44,7 @@ class BPEDataset(Dataset):
 # 2. Simple Transformer model
 # -----------------------------
 class ToyGPT(nn.Module):
-    def __init__(self, vocab_size, hidden_size, num_layers, num_heads):
+    def __init__(self, vocab_size, hidden_size, num_layers, num_heads, seq_len):
         super().__init__()
         self.seq_len = seq_len
         self.token_emb = nn.Embedding(vocab_size, hidden_size)
@@ -131,7 +131,7 @@ print("Vocab size:", dataset.vocab_size)
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = ToyGPT(vocab_size, hidden_size, num_layers, num_heads).to(device)
+model = ToyGPT(vocab_size, hidden_size, num_layers, num_heads, seq_len).to(device)
 loader = DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers, pin_memory=False)
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.AdamW(model.parameters(), lr=lr, betas=(0.9, 0.95))
@@ -176,4 +176,4 @@ print("Model weights saved!")
 
 
 
-chat("Coluds ")
+chat("Clouds")
