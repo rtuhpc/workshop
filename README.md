@@ -59,12 +59,12 @@ workshop/
 
 All software is available as environment modules on the cluster. Load them as shown in each task.
 
-| Software | Module name | Tasks |
-|---|---|---|
-| OpenMPI | `openmpi` | 1 (parallel), 5 |
-| Blender | `blender/2.70` | 2 |
-| CUDA toolkit | `cuda/cuda-12.4` | 3 |
-| PyTorch (GPU) | `AI/pytorch-2.5.1-gpu-sg` | 4 |
+| Software | Module name |
+|---|---|
+| Blender | `blender/2.70` | 
+| CUDA toolkit | `cuda/cuda-12.4` |
+| PyTorch (GPU) | `AI/pytorch-2.5.1-gpu-sg` |
+| OpenMPI | `openmpi` |
 
 List available versions of any package:
 
