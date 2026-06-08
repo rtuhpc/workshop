@@ -318,6 +318,10 @@ convert -delay 20 *.png heat.gif
 
 Refer to `heat_solver.pdf` for a description of the finite-difference scheme, boundary conditions, and convergence criteria.
 
+### Reference
+
+"MPI heat solver" source code and problem description adapted from the KTH PDC Center for High Performance Computing Summer School.
+
 ---
 
 ## Modification suggestions
