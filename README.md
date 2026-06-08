@@ -245,6 +245,9 @@ module load cuda/cuda-12.4
 nvcc hello-world.cu -o out
 ./out
 ```
+### Reference
+
+Source code adapted from: [Hello World for CUDA](http://computer-graphics.se/hello-world-for-cuda.html)
 
 ---
 
