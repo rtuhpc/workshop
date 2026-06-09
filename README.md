@@ -140,11 +140,12 @@ echo "Sveiciens no nodes $HOSTNAME"
 ### Running
 
 ```bash
+cd task1
 # Single node
-qsub task1/hostname.sh
+qsub hostname.sh
 
 # Multi-node via MPI
-qsub task1/hostname_parallel.sh
+qsub hostname_parallel.sh
 ```
 
 Job output appears in your working directory as `<jobname>.o<JOB_ID>`.
@@ -160,7 +161,7 @@ exit
 To target a specific node:
 
 ```bash
-qsub -l nodes=wn68 task1/hostname.sh
+qsub -l nodes=wn68 hostname.sh
 ```
 
 ---
